@@ -1,6 +1,6 @@
 
 ######################################
-# Test page "Secure Area" #
+# Test "Shop.by" #
 ######################################
 
 def test_search(app, config):
