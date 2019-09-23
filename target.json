@@ -1,0 +1,7 @@
+{
+  "web": {
+    "baseUrl": "https://shop.by",
+    "username": "tomsmith",
+    "password": "SuperSecretPassword!"
+  }
+}
