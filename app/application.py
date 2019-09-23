@@ -1,5 +1,6 @@
 from selenium import webdriver
 from actions.navigation_catalogue import NavigationCatalogActions
+from actions.laptops import LaptopsActions
 import os
 from selenium.common.exceptions import WebDriverException
 import webium.settings
@@ -33,6 +34,7 @@ class Application:
         LOGGER.info("Started browser")
         self.base_url = base_url
         self.navigation_catalog = NavigationCatalogActions(self)
+        self.laptops = LaptopsActions(self)
 
     def open_home_page(self):
         driver = self.driver

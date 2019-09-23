@@ -37,5 +37,5 @@ class NavigationCatalogActions(BasePage):
         self.choose_laptop_in_catalog()
 
     def choose_laptop_in_catalog(self):
-        LOGGER.info("Choose laptop in catalog")
+        LOGGER.info("Choose laptops in catalog")
         self.navigation_catalog_actions.choose_laptop.click()
