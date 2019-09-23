@@ -1,9 +1,8 @@
 from pages.navigation_catalog_page import NavigationCatalogPageLocators
 import logging
-from selenium.webdriver import ActionChains
 from webium.wait import wait
 from webium import BasePage, Finds, Find
-from selenium.webdriver.common.by import By
+
 LOGGER = logging.getLogger(__name__)
 
 
@@ -32,8 +31,11 @@ class NavigationCatalogActions(BasePage):
                 break
 
     def navigate_to(self, section, subsection):
+        LOGGER.info("Navigate to %s -> %s", section, subsection)
         self.hover_section(section)
         self.hover_sub_section(subsection)
-        LOGGER.info("Navigate to %s -> %s", section, subsection)
+        self.choose_laptop_in_catalog()
 
-
+    def choose_laptop_in_catalog(self):
+        LOGGER.info("Choose laptop in catalog")
+        self.navigation_catalog_actions.choose_laptop.click()
