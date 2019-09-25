@@ -6,7 +6,7 @@ import time
 def test_search(app, config):
     app.open_home_page()
     app.navigation_catalog.navigate_to("Компьютеры", "Ноутбуки")
-    app.laptops.choose_laptop_name("Lenovo")
+    # app.laptops.choose_laptop_name("Lenovo")
     # app.laptops.choose_laptop_name("Dell")
     # app.laptops.choose_laptop_name("HP")
     # app.laptops.choose_laptop_price("700", "1500")

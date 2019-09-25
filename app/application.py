@@ -1,5 +1,5 @@
 from selenium import webdriver
-from actions.navigation_catalogue import NavigationCatalogActions
+from actions.navigation_catalog import NavigationCatalogActions
 from actions.laptops import LaptopsActions
 import os
 from selenium.common.exceptions import WebDriverException
@@ -27,7 +27,8 @@ class Application:
         self.driver.implicitly_wait(30)
         webium.settings.wait_timeout = 15
         # Invokes the window manager-specific 'full screen' operation
-        self.driver.set_window_size(1980, 1020)
+        LOGGER.info("Expand browser to full screen")
+        self.driver.maximize_window()
         # Delete all cookies in the scope of the session
         self.driver.delete_all_cookies()
         # Initialize pages
