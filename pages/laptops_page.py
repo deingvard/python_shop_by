@@ -2,8 +2,6 @@ from selenium.webdriver.common.by import By
 from webium import BasePage, Finds, Find
 import logging
 
-from webium.controls.select import Select
-
 LOGGER = logging.getLogger(__name__)
 
 

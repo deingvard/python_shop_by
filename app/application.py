@@ -5,6 +5,7 @@ import os
 from selenium.common.exceptions import WebDriverException
 import webium.settings
 import logging
+import allure
 
 LOGGER = logging.getLogger(__name__)
 
@@ -37,6 +38,7 @@ class Application:
         self.navigation_catalog = NavigationCatalogActions(self)
         self.laptops = LaptopsActions(self)
 
+    @allure.step("Open url 'https://shop.by'")
     def open_home_page(self):
         driver = self.driver
         driver.get(self.base_url)
@@ -45,7 +47,9 @@ class Application:
     def destroy(self):
         # Stop the browser
         self.driver.quit()
+        LOGGER.info("Quits the driver and closes every associated window.")
 
+    # Verify the URL of the current page.
     def is_valid(self):
         try:
             self.current_url()
@@ -54,5 +58,6 @@ class Application:
         except WebDriverException:
             return False
 
+    # Gets the URL of the current page.
     def current_url(self):
         return self.driver.current_url
