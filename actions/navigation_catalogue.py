@@ -1,3 +1,4 @@
+from pages.base_page_object import BasePageObject
 from pages.navigation_catalog_page import NavigationCatalogPageLocators
 import logging
 from webium.wait import wait
@@ -6,7 +7,7 @@ from webium import BasePage, Finds, Find
 LOGGER = logging.getLogger(__name__)
 
 
-class NavigationCatalogActions(BasePage):
+class NavigationCatalogActions(BasePage, BasePageObject):
 
     # Get an instance driver, app, NavigationCatalogPageLocators
     def __init__(self, app):
