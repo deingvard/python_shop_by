@@ -27,12 +27,13 @@ class NavigationCatalogActions(BasePage, BasePageObject):
                 break
 
     @allure.step("Navigate to 'Computers' and select 'Laptops'.")
-    def navigate_to(self, section_computers, subsection_notebooks):
-        LOGGER.info("Navigate to %s -> %s", section_computers, subsection_notebooks)
-        self.click_catalog_section(section_computers)
+    def navigate_to(self, group):
+        LOGGER.info("Navigate to %s -> %s", group.menu)
+        self.click_catalog_section(group.menu)
         self.choose_laptop_in_catalog()
 
     # Click on the "Laptops" button on the catalog page
     def choose_laptop_in_catalog(self):
         LOGGER.info("Choose laptops in catalog")
         self.navigation_catalog_actions.choose_laptop.click()
+

@@ -22,12 +22,12 @@ def config(request):
 
 
 @pytest.fixture
-def app(request):
+def app(request, config):
     global fixture
     browser = request.config.getoption("--browser")
     web_config = load_config(request.config.getoption("--target"))["web"]
     if fixture is None or not fixture.is_valid():
-        fixture = Application(browser=browser, base_url=web_config['baseUrl'])
+        fixture = Application(browser=browser, base_url=web_config['baseUrl'], config=config)
     return fixture
 
 

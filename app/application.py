@@ -11,7 +11,7 @@ LOGGER = logging.getLogger(__name__)
 
 
 class Application:
-    def __init__(self, browser, base_url):
+    def __init__(self, browser, base_url, config):
         # Set browser
         if browser == "firefox":
             self.driver = webdriver.Firefox()
@@ -37,6 +37,7 @@ class Application:
         self.base_url = base_url
         self.navigation_catalog = NavigationCatalogActions(self)
         self.laptops = LaptopsActions(self)
+        self.config = config
 
     @allure.step("Open url 'https://shop.by'")
     def open_home_page(self):

@@ -8,11 +8,14 @@
     "HP": "HP"
   },
   "laptop_price": {
-    "from": "700",
-    "to": "1500"
+    "price_from": "700",
+    "price_to": "1500"
   },
   "laptop_diagonal": {
-    "from": "15",
-    "to": "17"
+    "diagonal_from": "15",
+    "diagonal_to": "17"
+  },
+    "catalog": {
+    "menu": "Компьютеры"
   }
 }
