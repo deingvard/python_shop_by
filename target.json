@@ -1,7 +1,18 @@
 {
   "web": {
-    "baseUrl": "https://shop.by",
-    "username": "tomsmith",
-    "password": "SuperSecretPassword!"
+    "baseUrl": "https://shop.by"
+  },
+  "laptop_manufacture": {
+    "Lenovo": "Lenovo",
+    "Dell": "Dell",
+    "HP": "HP"
+  },
+  "laptop_price": {
+    "from": "700",
+    "to": "1500"
+  },
+  "laptop_diagonal": {
+    "from": "15",
+    "to": "17"
   }
 }

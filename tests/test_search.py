@@ -14,5 +14,5 @@ def test_search(app, config):
     # app.laptops.choose_laptops_diagonal("15")
     # app.laptops.choose_laptops_diagonal("17")
 
-    time.sleep(5)
+    time.sleep(2)
 

@@ -17,7 +17,7 @@ class NavigationCatalogActions(BasePage, BasePageObject):
         self.driver = app.driver
         self.navigation_catalog_actions = NavigationCatalogPageLocators(driver=self.driver)
 
-    @allure.step('Define hover_section() function to click on the section "Computers" on the main page')
+    @allure.step('Click on the section "Computers" on the main page')
     def click_catalog_section(self, section_name):
         LOGGER.info("Hover computers section")
         for section in self.navigation_catalog_actions.sections:
@@ -32,7 +32,7 @@ class NavigationCatalogActions(BasePage, BasePageObject):
         self.click_catalog_section(section_computers)
         self.choose_laptop_in_catalog()
 
-    @allure.step('Click on the "Laptops" button on the catalog page')
+    # Click on the "Laptops" button on the catalog page
     def choose_laptop_in_catalog(self):
         LOGGER.info("Choose laptops in catalog")
         self.navigation_catalog_actions.choose_laptop.click()
