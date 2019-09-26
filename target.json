@@ -3,9 +3,9 @@
     "baseUrl": "https://shop.by"
   },
   "laptop_manufacture": {
-    "Lenovo": "Lenovo",
-    "Dell": "Dell",
-    "HP": "HP"
+    "lenovo": "Lenovo",
+    "dell": "Dell",
+    "hp": "HP"
   },
   "laptop_price": {
     "price_from": "700",

@@ -13,11 +13,11 @@ def test_search(app, config):
 
     app.laptops.click_show_name_laptops()
     app.laptops.choose_laptop_name(
-        app.config["laptop_manufacture"]["Lenovo"])
+        app.config["laptop_manufacture"]["lenovo"])
     app.laptops.choose_laptop_name(
-        app.config["laptop_manufacture"]["Dell"])
+        app.config["laptop_manufacture"]["dell"])
     app.laptops.choose_laptop_name(
-        app.config["laptop_manufacture"]["HP"])
+        app.config["laptop_manufacture"]["hp"])
 
     app.laptops.choose_laptop_price(Group(
         price_from=app.config['laptop_price']['price_from'],
